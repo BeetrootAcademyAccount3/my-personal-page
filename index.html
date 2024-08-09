@@ -4,9 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My personal</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+
+    <style>
+      section {
+        background-color: pink;
+      }
+    </style>
   </head>
   <body>
     <header>
+      <picture>
+        <source media="(max-width: 500px)" srcset="./assets/img/small.jpg" />
+        <source
+          media="(min-width: 501px) and (max-width: 1200px)"
+          srcset="./assets/img/mid.jpg"
+        />
+        <img
+          style="width: 100%"
+          src="./assets/img/large.jpg"
+          alt="Large image"
+        />
+      </picture>
       <h1>My personal site</h1>
       <nav>
         <ul>
@@ -25,65 +44,66 @@
     <main>
       <section id="about">
         <h2>About me</h2>
+        <figure>
+          <img src="./assets/img/small.jpg" alt="Profile picture" />
+          <figcaption>This is me from 2022.</figcaption>
+        </figure>
         <p>
-          My name is Ivo Nikolov. I live in Sofia and I have been a Software
-          developer for more than 8 years. I have worked on Mobile and Web
-          Applications. I have been a leading developer for RSC for more than 3
-          years and have contributed to the <b>Stork Mobile Application</b>.
-          Also I love the <i>LOTR</i> trilogy and we cannot talk if you do not
-          like it.Best moment of my life was when I received an Arsenal football
+          My name is Ivo Nikolov. I live in Sofia and I have been a
+          <em>Software developer</em> for more than 8 years. I have worked on
+          Mobile and Web Applications. I have been a leading developer for
+          <abbr title="Rumen & Stanislav Consulting">RSC</abbr>
+          for more than 3 years and have contributed to the
+          <strong>Stork Mobile Application</strong>. Also I love the
+          <cite>LOTR</cite> trilogy and we cannot talk if you do not like
+          it.Best moment of my life was when I received an Arsenal football
           shirt. It was the one with the O2 logo and I remember it costed 99.50
-          leva.
+          leva. My dad said <q>I knew he would like it</q>.
         </p>
       </section>
       <section id="experience">
         <h2>Working Experience</h2>
-        <ul>
-          <li>
-            <h3>B-eye(Oct 2015 - Apr 2018)</h3>
-            <p>
-              B-eye is a leading business intelligence and data analytics firm,
-              specializing in providing cutting-edge solutions for data-driven
-              decision-making. Their expertise spans across various industries,
-              helping organizations leverage their data to gain competitive
-              advantages.
-            </p>
-          </li>
-          <li>
-            <h3>RSC(Apr 2018 - Oct 2020)</h3>
-            <p>
-              RSC (Rapid Solutions Consultancy) is a dynamic consulting company
-              offering innovative strategies and solutions for process
-              optimization and digital transformation. They are known for their
-              agile approach in tackling complex business challenges and
-              delivering impactful results.
-            </p>
-          </li>
-          <li>
-            <h3>DataCore(Nov 2020 - Nov 2021)</h3>
-            <p>
-              DataCore is an innovative company at the forefront of data storage
-              and virtualization technologies. They offer advanced
-              software-defined storage solutions that enhance data availability,
-              performance, and scalability for enterprises worldwide.
-            </p>
-          </li>
-          <li>
-            <h3>Schwarz IT( Dec 2021 - )</h3>
-            <p>
-              Schwarz IT is a global IT services provider, delivering
-              comprehensive technology solutions to support business operations
-              across various sectors. Their focus is on driving digital
-              transformation through state-of-the-art IT infrastructure and
-              cutting-edge software development.
-            </p>
-          </li>
-        </ul>
+        <dl>
+          <dt>B-eye(Oct 2015 - Apr 2018)</dt>
+          <dd>
+            B-eye is a leading business intelligence and data analytics firm,
+            specializing in providing cutting-edge solutions for data-driven
+            decision-making. Their expertise spans across various industries,
+            helping organizations leverage their data to gain competitive
+            advantages.
+          </dd>
+
+          <dt>RSC(Apr 2018 - Oct 2020)</dt>
+          <dd>
+            RSC (Rapid Solutions Consultancy) is a dynamic consulting company
+            offering innovative strategies and solutions for process
+            optimization and digital transformation. They are known for their
+            agile approach in tackling complex business challenges and
+            delivering impactful results.
+          </dd>
+
+          <dt>DataCore(Nov 2020 - Nov 2021)</dt>
+          <dd>
+            DataCore is an innovative company at the forefront of data storage
+            and virtualization technologies. They offer advanced
+            software-defined storage solutions that enhance data availability,
+            performance, and scalability for enterprises worldwide.
+          </dd>
+
+          <dt>Schwarz IT( Dec 2021 - )</dt>
+          <dd>
+            Schwarz IT is a global IT services provider, delivering
+            comprehensive technology solutions to support business operations
+            across various sectors. Their focus is on driving digital
+            transformation through state-of-the-art IT infrastructure and
+            cutting-edge software development.
+          </dd>
+        </dl>
       </section>
       <article id="article">
         <h2>Article about me in New York Times</h2>
         <h3>From Rags to IT Riches: The Inspiring Journey of Ivo Nikolov</h3>
-        <p>
+        <p class="my-first-class">
           In the vast realm of success stories, Ivo Nikolov's journey stands out
           as a true testament to determination, resilience, and unwavering
           passion. Born into humble beginnings, Nikolov defied all odds and rose
@@ -131,53 +151,84 @@
           belief that with unwavering commitment and hard work, dreams can be
           turned into reality, and the impossible can be conquered.
         </p>
-        Written by John Doe
+        <address>Written by John Doe</address>
       </article>
       <aside id="elon">
         <h2>Elon Musk about me:</h2>
-        <p>
+        <blockquote cite="https://trustmebro.square.site/">
           "He is incredible. He will save our planet. He will show us the way.
           Honestly I am thinking of gifting him my Tweeter and Tesla companies
           and I am sure he will do a better job than me!"
-        </p>
-        Source:
-        <a href="https://trustmebro.square.site/"
-          >https://trustmebro.square.site/</a
-        >
+        </blockquote>
       </aside>
       <section id="capabilities">
         <h2>My capabilities</h2>
         <ul>
-          <li>HTML: 6</li>
-          <li>CSS: 4</li>
-          <li>JavaScript: 6</li>
-          <li>ReactJs: 5</li>
+          <li>HTML: <progress value="7" max="10">70%</progress></li>
+          <li>CSS: <progress value="4" max="10">40%</progress></li>
+          <li>JavaScript: <progress value="6" max="10">60%</progress></li>
+          <li>ReactJs: <progress value="5" max="10">50%</progress></li>
         </ul>
       </section>
       <section id="quote">
         <h2>Quote I live by:</h2>
-        <span
-          >"He who is not courageous enough to take risks will accomplish
-          nothing in life." — Muhammad Ali</span
-        >
+        <blockquote>
+          "He who is not courageous enough to take risks will accomplish nothing
+          in life." — <cite>Muhammad Ali</cite>
+        </blockquote>
       </section>
       <section id="video">
         <h2>Congratulatory Video</h2>
+        <video width="320" height="240" controls>
+          <source src="./assets/video/congrats.mp4" type="video/mp4" />
+          <source src="./assets/video/congrats.ogg" type="video/ogg" />
+          Your browser does not support video tag.
+        </video>
       </section>
       <section id="goals">
         <h2>Life goals</h2>
         <ol>
-          <li>Become a developer V</li>
-          <li>Have a family V</li>
-          <li>Achieve world peace X</li>
+          <li><del>Become a developer</del></li>
+          <li><del>Have a family</del></li>
+          <li>Achieve world peace</li>
         </ol>
+      </section>
+      <section id="accomplishments">
+        <h2>Accomplishments</h2>
+        Loading:
+        <meter min="0" max="100" low="33" high="66" optimum="80" value="60">
+          60%
+        </meter>
+      </section>
+      <section id="address">
+        <h2>Contact me</h2>
+        <h3>If you have any questions, feel free to contact me</h3>
+        <address>
+          1234, Random Street, <br />
+          Sofia, <br />
+          <a href="mailto:ivonikolov884@gmail.com">ivonikolov884@gmail.com</a>
+          <br />
+          Phone: 111111
+        </address>
       </section>
       <section id="message">
         <h2>Write me a message</h2>
+        <form>
+          <fieldset>
+            <legend>Write me a message</legend>
+            <br />
+            <label for="email">Email:</label> <br />
+            <input type="email" name="email" /> <br />
+            <textarea name="message" cols="30" rows="10"></textarea> <br />
+            <button type="submit">Submit</button>
+          </fieldset>
+        </form>
       </section>
     </main>
     <footer>
       <p>All Rights Reserved. 2024</p>
+      <hr />
+      <small><bdo dir="rtl">This site is lie</bdo> </small>
     </footer>
   </body>
 </html>
